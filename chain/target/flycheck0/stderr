@@ -1,0 +1,76 @@
+   0.003920750s  INFO prepare_target{force=false package_id=crypto v0.1.0 (/Users/usamahassan/WORK/my_blockchain/chain/crates/crypto) target="crypto"}: cargo::core::compiler::fingerprint: fingerprint error for crypto v0.1.0 (/Users/usamahassan/WORK/my_blockchain/chain/crates/crypto)/Check { test: true }/TargetInner { name_inferred: true, ..: lib_target("crypto", ["lib"], "/Users/usamahassan/WORK/my_blockchain/chain/crates/crypto/src/lib.rs", Edition2024) }
+   0.004130334s  INFO prepare_target{force=false package_id=crypto v0.1.0 (/Users/usamahassan/WORK/my_blockchain/chain/crates/crypto) target="crypto"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/usamahassan/WORK/my_blockchain/chain/target/debug/.fingerprint/crypto-192a7765419eeff8/test-lib-crypto`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: <std::backtrace::Backtrace>::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+   0.013885959s  INFO prepare_target{force=false package_id=merkle v0.1.0 (/Users/usamahassan/WORK/my_blockchain/chain/crates/merkle) target="merkle"}: cargo::core::compiler::fingerprint: fingerprint error for merkle v0.1.0 (/Users/usamahassan/WORK/my_blockchain/chain/crates/merkle)/Check { test: true }/TargetInner { name_inferred: true, ..: lib_target("merkle", ["lib"], "/Users/usamahassan/WORK/my_blockchain/chain/crates/merkle/src/lib.rs", Edition2024) }
+   0.013894875s  INFO prepare_target{force=false package_id=merkle v0.1.0 (/Users/usamahassan/WORK/my_blockchain/chain/crates/merkle) target="merkle"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/usamahassan/WORK/my_blockchain/chain/target/debug/.fingerprint/merkle-f824d981516582b6/test-lib-merkle`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: <std::backtrace::Backtrace>::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+   0.014294292s  INFO prepare_target{force=false package_id=types v0.1.0 (/Users/usamahassan/WORK/my_blockchain/chain/crates/types) target="types"}: cargo::core::compiler::fingerprint: fingerprint error for types v0.1.0 (/Users/usamahassan/WORK/my_blockchain/chain/crates/types)/Check { test: true }/TargetInner { name_inferred: true, ..: lib_target("types", ["lib"], "/Users/usamahassan/WORK/my_blockchain/chain/crates/types/src/lib.rs", Edition2024) }
+   0.014298542s  INFO prepare_target{force=false package_id=types v0.1.0 (/Users/usamahassan/WORK/my_blockchain/chain/crates/types) target="types"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/usamahassan/WORK/my_blockchain/chain/target/debug/.fingerprint/types-9ac0f324319b4f8c/test-lib-types`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: <std::backtrace::Backtrace>::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+    Checking types v0.1.0 (/Users/usamahassan/WORK/my_blockchain/chain/crates/types)
+    Checking crypto v0.1.0 (/Users/usamahassan/WORK/my_blockchain/chain/crates/crypto)
+    Checking merkle v0.1.0 (/Users/usamahassan/WORK/my_blockchain/chain/crates/merkle)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.16s
