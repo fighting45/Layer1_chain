@@ -35,3 +35,42 @@ pub fn address_from_pubkey(public_key:&VerifyingKey)->[u8;20]{
     addr.copy_from_slice(&h[..20]);
     addr
 }
+
+#[cfg(test)]
+mod tests {
+
+
+use super::*;
+
+    #[test]
+    fn test_hash_is_deterministic(){
+        let h1 = hash(b"hello");
+        let h2 = hash(b"hello");
+        assert_eq!(h1, h2);
+    }
+    #[test]
+    fn test_different_inputs_give_different_outputs(){
+        let h1 = hash(b"hello");
+        let h2 = hash(b"world");
+        assert_ne!(h1, h2);
+    }
+    #[test]
+    fn test_verify_and_sign(){
+        let keypair = KeyPair::generate();
+        let message = b"transfer 10 coins to usama";
+        let signature = keypair.sign(message);
+        assert!(!verify(&keypair.public_key(), message, &signature));
+    }
+    #[test]
+    fn test_wrong_message_fails_verify(){
+        let keypair = KeyPair::generate();
+        let signature = keypair.sign(b"real message");
+        assert!(!verify(&keypair.public_key(),b"fake message", &signature));
+    }
+    #[test]
+    fn tes_address_is_20_bytes(){
+        let keypair = KeyPair::generate();
+        let addr = address_from_pubkey(&keypair.public_key());
+        assert_eq!(addr.len(),20);
+    }
+}
