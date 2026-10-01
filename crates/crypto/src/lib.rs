@@ -59,7 +59,7 @@ use super::*;
         let keypair = KeyPair::generate();
         let message = b"transfer 10 coins to usama";
         let signature = keypair.sign(message);
-        assert!(!verify(&keypair.public_key(), message, &signature));
+        assert!(verify(&keypair.public_key(), message, &signature));
     }
     #[test]
     fn test_wrong_message_fails_verify(){
